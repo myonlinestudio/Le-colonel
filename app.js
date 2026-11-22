@@ -78,11 +78,10 @@ return;
 grid.innerHTML = list.map(c => `
 <article class="cheese-card">
 
-<div class="cheese-visual ${c.image ? '' : 'image-failed'}">
-<img src="${c.image || ""}" alt="Photographie du fromage ${c.name}" loading="lazy"
-onerror="this.parentElement.classList.add('image-failed')">
+<div class="cheese-visual image-loading">
+<img data-cheese-id="${c.id}" alt="Photographie du fromage ${c.name}" loading="lazy" onload="this.parentElement.classList.remove('image-loading','image-failed')" onerror="handleImageError('${c.id}', this)">
 <span class="image-fallback">${c.name}</span>
-<a class="image-credit" href="${c.imageSource}" target="_blank" rel="noopener">Photo : Wikimedia Commons</a>
+<a class="image-credit" href="${c.imageSource || "https://commons.wikimedia.org/"}" target="_blank" rel="noopener" style="${c.imageSource ? "" : "display:none"}">Photo : Wikimedia Commons</a>
 </div>
 
 <div class="card-content">
@@ -179,11 +178,11 @@ $("#modalBody").innerHTML = `
 
 </div>
 
-<div class="modal-photo ${c.image ? '' : 'image-failed'}">
-<img src="${c.image}" alt="Photographie du fromage ${c.name}"
-onerror="this.parentElement.classList.add('image-failed')">
+<div class="modal-photo image-loading">
+<img data-cheese-id="${c.id}" alt="Photographie du fromage ${c.name}" onload="this.parentElement.classList.remove('image-loading','image-failed')" onerror="handleImageError('${c.id}', this)">
 <span class="image-fallback">${c.name}</span>
 </div>
+<p class="photo-credit">Crédit photo : <a data-photo-credit="${c.id}" href="${c.imageSource || "https://commons.wikimedia.org/"}" target="_blank" rel="noopener">${c.imageCredit || "Wikimedia Commons"}</a></p>
 <p class="photo-credit">Crédit photo : <a href="${c.imageSource}" target="_blank" rel="noopener">${c.imageCredit}</a></p>
 
 <p>${c.description}</p>
