@@ -9,6 +9,7 @@ name:"Livarot",
 family:"Pâte molle à croûte lavée",
 milk:"Vache",
 region:"Normandie",
+country: "France",
 place:"Pays d’Auge, Calvados",
 label:["AOP"],
 price:[22,32],
@@ -26,6 +27,7 @@ name:"Camembert de Normandie",
 family:"Pâte molle à croûte fleurie",
 milk:"Vache",
 region:"Normandie",
+country: "France",
 place:"Aire géographique de l’AOP en Normandie",
 label:["AOP"],
 price:[18,28],
@@ -43,6 +45,7 @@ name:"Comté",
 family:"Pâte pressée cuite",
 milk:"Vache",
 region:"Jura",
+country: "France",
 place:"Massif du Jura",
 label:["AOP"],
 price:[24,42],
@@ -60,6 +63,7 @@ name:"Roquefort",
 family:"Pâte persillée",
 milk:"Brebis",
 region:"Aveyron",
+country: "France",
 place:"Roquefort-sur-Soulzon",
 label:["AOP"],
 price:[30,48],
@@ -77,6 +81,7 @@ name:"Reblochon de Savoie",
 family:"Pâte pressée non cuite",
 milk:"Vache",
 region:"Savoie",
+country: "France",
 place:"Massif des Aravis",
 label:["AOP"],
 price:[22,34],
@@ -94,6 +99,7 @@ name:"Munster",
 family:"Pâte molle à croûte lavée",
 milk:"Vache",
 region:"Alsace",
+country: "France",
 place:"Massif vosgien",
 label:["AOP"],
 price:[22,36],
@@ -111,6 +117,7 @@ name:"Brie de Meaux",
 family:"Pâte molle à croûte fleurie",
 milk:"Vache",
 region:"Île-de-France",
+country: "France",
 place:"Seine-et-Marne",
 label:["AOP"],
 price:[25,40],
@@ -128,6 +135,7 @@ name:"Morbier",
 family:"Pâte pressée non cuite",
 milk:"Vache",
 region:"Jura",
+country: "France",
 place:"Massif du Jura",
 label:["AOP"],
 price:[22,34],
@@ -145,6 +153,7 @@ name:"Sainte-Maure de Touraine",
 family:"Fromage de chèvre",
 milk:"Chèvre",
 region:"Touraine",
+country: "France",
 place:"Indre-et-Loire",
 label:["AOP"],
 price:[28,42],
@@ -162,6 +171,7 @@ name:"Tomme de Savoie",
 family:"Pâte pressée non cuite",
 milk:"Vache",
 region:"Savoie",
+country: "France",
 place:"Savoie et Haute-Savoie",
 label:["IGP"],
 price:[18,30],
@@ -178,6 +188,7 @@ season:"Toute l’année"
     "family": "Pâte persillée",
     "milk": "Vache",
     "region": "Angleterre",
+"country": "Royaume-Uni",
     "place": "Derbyshire, Leicestershire et Nottinghamshire",
     "label": [
       "PDO"
@@ -200,6 +211,7 @@ season:"Toute l’année"
     "family": "Pâte pressée cuite",
     "milk": "Vache",
     "region": "Angleterre",
+"country": "Royaume-Uni",
     "place": "Somerset et régions voisines",
     "label": [],
     "price": [
@@ -220,6 +232,7 @@ season:"Toute l’année"
     "family": "Pâte pressée cuite",
     "milk": "Vache",
     "region": "Angleterre",
+"country": "Royaume-Uni",
     "place": "Leicestershire",
     "label": [],
     "price": [
@@ -240,6 +253,7 @@ season:"Toute l’année"
     "family": "Pâte pressée cuite",
     "milk": "Vache",
     "region": "Angleterre",
+"country": "Royaume-Uni",
     "place": "Gloucestershire",
     "label": [],
     "price": [
@@ -260,6 +274,7 @@ season:"Toute l’année"
     "family": "Pâte pressée non cuite",
     "milk": "Vache",
     "region": "Angleterre",
+"country": "Royaume-Uni",
     "place": "Yorkshire",
     "label": [],
     "price": [
@@ -280,6 +295,7 @@ season:"Toute l’année"
     "family": "Pâte pressée non cuite",
     "milk": "Vache",
     "region": "Angleterre",
+"country": "Royaume-Uni",
     "place": "Cheshire",
     "label": [],
     "price": [
@@ -300,6 +316,7 @@ season:"Toute l’année"
     "family": "Pâte pressée non cuite",
     "milk": "Vache",
     "region": "Angleterre",
+"country": "Royaume-Uni",
     "place": "Lancashire",
     "label": [],
     "price": [
@@ -320,6 +337,7 @@ season:"Toute l’année"
     "family": "Pâte pressée non cuite",
     "milk": "Vache",
     "region": "Angleterre",
+"country": "Royaume-Uni",
     "place": "Cornouailles",
     "label": [],
     "price": [
@@ -340,6 +358,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Angleterre",
+"country": "Royaume-Uni",
     "place": "Angleterre",
     "label": [],
     "price": [
@@ -360,6 +379,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Angleterre",
+"country": "Royaume-Uni",
     "place": "Cotswolds",
     "label": [],
     "price": [
@@ -380,6 +400,7 @@ season:"Toute l’année"
     "family": "Pâte persillée",
     "milk": "Vache",
     "region": "Irlande",
+"country": "Irlande",
     "place": "Comté de Tipperary",
     "label": [],
     "price": [
@@ -400,6 +421,7 @@ season:"Toute l’année"
     "family": "Pâte molle à croûte lavée",
     "milk": "Vache",
     "region": "Irlande",
+"country": "Irlande",
     "place": "Comté de Cork",
     "label": [],
     "price": [
@@ -420,6 +442,7 @@ season:"Toute l’année"
     "family": "Pâte molle à croûte lavée",
     "milk": "Vache",
     "region": "Irlande",
+"country": "Irlande",
     "place": "Comté de Cork",
     "label": [],
     "price": [
@@ -440,6 +463,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Irlande",
+"country": "Irlande",
     "place": "Comté de Cork",
     "label": [],
     "price": [
@@ -460,6 +484,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Brebis",
     "region": "Espagne",
+"country": "Espagne",
     "place": "La Mancha",
     "label": [
       "PDO"
@@ -482,6 +507,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Brebis",
     "region": "Espagne",
+"country": "Espagne",
     "place": "Pays basque et Navarre",
     "label": [
       "PDO"
@@ -504,6 +530,7 @@ season:"Toute l’année"
     "family": "Pâte persillée",
     "milk": "Vache, brebis ou chèvre",
     "region": "Espagne",
+"country": "Espagne",
     "place": "Asturies",
     "label": [
       "PDO"
@@ -526,6 +553,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Espagne",
+"country": "Espagne",
     "place": "Minorque, Baléares",
     "label": [
       "PDO"
@@ -548,6 +576,7 @@ season:"Toute l’année"
     "family": "Pâte molle",
     "milk": "Vache",
     "region": "Espagne",
+"country": "Espagne",
     "place": "Galice",
     "label": [
       "PDO"
@@ -570,6 +599,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Brebis",
     "region": "Espagne",
+"country": "Espagne",
     "place": "Vallée de Roncal, Navarre",
     "label": [
       "PDO"
@@ -592,6 +622,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Brebis",
     "region": "Espagne",
+"country": "Espagne",
     "place": "Castille-et-León",
     "label": [
       "PDO"
@@ -614,6 +645,7 @@ season:"Toute l’année"
     "family": "Pâte molle",
     "milk": "Brebis",
     "region": "Espagne",
+"country": "Espagne",
     "place": "Estrémadure",
     "label": [
       "PDO"
@@ -636,6 +668,7 @@ season:"Toute l’année"
     "family": "Pâte persillée",
     "milk": "Vache",
     "region": "Italie",
+"country": "Italie",
     "place": "Lombardie et Piémont",
     "label": [
       "PDO"
@@ -658,6 +691,7 @@ season:"Toute l’année"
     "family": "Pâte pressée cuite",
     "milk": "Vache",
     "region": "Italie",
+"country": "Italie",
     "place": "Émilie-Romagne et provinces limitrophes",
     "label": [
       "PDO"
@@ -680,6 +714,7 @@ season:"Toute l’année"
     "family": "Pâte pressée cuite",
     "milk": "Vache",
     "region": "Italie",
+"country": "Italie",
     "place": "Plaine du Pô",
     "label": [
       "PDO"
@@ -702,6 +737,7 @@ season:"Toute l’année"
     "family": "Pâte pressée cuite",
     "milk": "Brebis",
     "region": "Italie",
+"country": "Italie",
     "place": "Lazio, Sardaigne et province de Grosseto",
     "label": [
       "PDO"
@@ -724,6 +760,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Brebis",
     "region": "Italie",
+"country": "Italie",
     "place": "Toscane",
     "label": [
       "PDO"
@@ -746,6 +783,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Italie",
+"country": "Italie",
     "place": "Plateau d’Asiago et Trentin-Vénétie",
     "label": [
       "PDO"
@@ -768,6 +806,7 @@ season:"Toute l’année"
     "family": "Pâte pressée non cuite",
     "milk": "Vache",
     "region": "Italie",
+"country": "Italie",
     "place": "Vallée d’Aoste",
     "label": [
       "PDO"
@@ -790,6 +829,7 @@ season:"Toute l’année"
     "family": "Pâte molle à croûte lavée",
     "milk": "Vache",
     "region": "Italie",
+"country": "Italie",
     "place": "Lombardie",
     "label": [
       "PDO"
@@ -812,6 +852,7 @@ season:"Toute l’année"
     "family": "Pâte filée",
     "milk": "Vache",
     "region": "Italie",
+"country": "Italie",
     "place": "Plaine du Pô",
     "label": [
       "PDO"
@@ -834,6 +875,7 @@ season:"Toute l’année"
     "family": "Pâte filée",
     "milk": "Buffle",
     "region": "Italie",
+"country": "Italie",
     "place": "Campanie et zones définies voisines",
     "label": [
       "PDO"
@@ -856,6 +898,7 @@ season:"Toute l’année"
     "family": "Pâte filée",
     "milk": "Vache",
     "region": "Italie",
+"country": "Italie",
     "place": "Pouilles",
     "label": [],
     "price": [
@@ -876,6 +919,7 @@ season:"Toute l’année"
     "family": "Fromage de lactosérum",
     "milk": "Vache, brebis, chèvre ou bufflonne",
     "region": "Italie",
+"country": "Italie",
     "place": "Italie",
     "label": [],
     "price": [
@@ -896,6 +940,7 @@ season:"Toute l’année"
     "family": "Pâte molle",
     "milk": "Vache, chèvre ou brebis",
     "region": "Italie",
+"country": "Italie",
     "place": "Piémont et Lombardie",
     "label": [],
     "price": [
@@ -916,6 +961,7 @@ season:"Toute l’année"
     "family": "Pâte filée",
     "milk": "Vache",
     "region": "Italie",
+"country": "Italie",
     "place": "Italie méridionale",
     "label": [],
     "price": [
@@ -936,6 +982,7 @@ season:"Toute l’année"
     "family": "Pâte semi-dure",
     "milk": "Vache, brebis et chèvre",
     "region": "Chypre",
+"country": "Chypre",
     "place": "Chypre",
     "label": [
       "PDO"
@@ -958,6 +1005,7 @@ season:"Toute l’année"
     "family": "Pâte fraîche en saumure",
     "milk": "Brebis et chèvre",
     "region": "Grèce",
+"country": "Grèce",
     "place": "Grèce",
     "label": [
       "PDO"
@@ -980,6 +1028,7 @@ season:"Toute l’année"
     "family": "Pâte filée",
     "milk": "Brebis et chèvre",
     "region": "Grèce",
+"country": "Grèce",
     "place": "Grèce",
     "label": [
       "PDO"
@@ -1002,6 +1051,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Brebis ou vache",
     "region": "Grèce",
+"country": "Grèce",
     "place": "Crète et autres régions grecques",
     "label": [],
     "price": [
@@ -1022,6 +1072,7 @@ season:"Toute l’année"
     "family": "Pâte pressée dure",
     "milk": "Brebis ou chèvre",
     "region": "Grèce",
+"country": "Grèce",
     "place": "Grèce",
     "label": [],
     "price": [
@@ -1042,6 +1093,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Pays-Bas",
+"country": "Pays-Bas",
     "place": "Hollande-Méridionale et autres régions",
     "label": [],
     "price": [
@@ -1062,6 +1114,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Pays-Bas",
+"country": "Pays-Bas",
     "place": "Pays-Bas",
     "label": [],
     "price": [
@@ -1082,6 +1135,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Pays-Bas",
+"country": "Pays-Bas",
     "place": "Pays-Bas",
     "label": [],
     "price": [
@@ -1102,6 +1156,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Pays-Bas",
+"country": "Pays-Bas",
     "place": "Leyde, Hollande-Méridionale",
     "label": [],
     "price": [
@@ -1122,6 +1177,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Pays-Bas",
+"country": "Pays-Bas",
     "place": "Pays-Bas",
     "label": [],
     "price": [
@@ -1142,6 +1198,7 @@ season:"Toute l’année"
     "family": "Pâte pressée cuite",
     "milk": "Vache",
     "region": "Suisse",
+"country": "Suisse",
     "place": "Vallée de l’Emme et régions suisses",
     "label": [
       "AOP"
@@ -1164,6 +1221,7 @@ season:"Toute l’année"
     "family": "Pâte pressée cuite",
     "milk": "Vache",
     "region": "Suisse",
+"country": "Suisse",
     "place": "Canton de Fribourg et régions définies",
     "label": [
       "AOP"
@@ -1186,6 +1244,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Suisse",
+"country": "Suisse",
     "place": "Appenzell et régions voisines",
     "label": [],
     "price": [
@@ -1206,6 +1265,7 @@ season:"Toute l’année"
     "family": "Pâte extra-dure",
     "milk": "Vache",
     "region": "Suisse",
+"country": "Suisse",
     "place": "Suisse centrale",
     "label": [
       "AOP"
@@ -1228,6 +1288,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Suisse",
+"country": "Suisse",
     "place": "Jura bernois",
     "label": [
       "AOP"
@@ -1250,6 +1311,7 @@ season:"Toute l’année"
     "family": "Pâte mi-dure",
     "milk": "Vache",
     "region": "Suisse",
+"country": "Suisse",
     "place": "Valais",
     "label": [
       "AOP"
@@ -1272,6 +1334,7 @@ season:"Toute l’année"
     "family": "Pâte molle à croûte lavée",
     "milk": "Vache",
     "region": "Suisse",
+"country": "Suisse",
     "place": "Vaud et Jura vaudois",
     "label": [
       "AOP"
@@ -1294,6 +1357,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Suisse",
+"country": "Suisse",
     "place": "Appenzell",
     "label": [],
     "price": [
@@ -1314,6 +1378,7 @@ season:"Toute l’année"
     "family": "Fromage de lactosérum",
     "milk": "Vache ou chèvre",
     "region": "Norvège",
+"country": "Norvège",
     "place": "Norvège",
     "label": [],
     "price": [
@@ -1334,6 +1399,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Norvège",
+"country": "Norvège",
     "place": "Norvège",
     "label": [],
     "price": [
@@ -1354,6 +1420,7 @@ season:"Toute l’année"
     "family": "Pâte persillée sans bleu",
     "milk": "Vache",
     "region": "Norvège",
+"country": "Norvège",
     "place": "Vestlandet",
     "label": [],
     "price": [
@@ -1374,6 +1441,7 @@ season:"Toute l’année"
     "family": "Pâte persillée",
     "milk": "Vache",
     "region": "Danemark",
+"country": "Danemark",
     "place": "Danemark",
     "label": [
       "PGI"
@@ -1396,6 +1464,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Danemark",
+"country": "Danemark",
     "place": "Danemark",
     "label": [],
     "price": [
@@ -1416,6 +1485,7 @@ season:"Toute l’année"
     "family": "Pâte molle à croûte lavée",
     "milk": "Vache",
     "region": "Danemark",
+"country": "Danemark",
     "place": "Zélande",
     "label": [
       "PGI"
@@ -1438,6 +1508,7 @@ season:"Toute l’année"
     "family": "Pâte molle affinée",
     "milk": "Vache",
     "region": "Tchéquie",
+"country": "Tchéquie",
     "place": "Olomouc et Moravie",
     "label": [
       "PGI"
@@ -1460,6 +1531,7 @@ season:"Toute l’année"
     "family": "Pâte fumée",
     "milk": "Brebis",
     "region": "Pologne",
+"country": "Pologne",
     "place": "Podhale, Carpates",
     "label": [
       "PDO"
@@ -1482,6 +1554,7 @@ season:"Toute l’année"
     "family": "Fromage frais affiné",
     "milk": "Brebis",
     "region": "Pologne",
+"country": "Pologne",
     "place": "Podhale",
     "label": [
       "PDO"
@@ -1504,6 +1577,7 @@ season:"Toute l’année"
     "family": "Pâte fraîche en saumure",
     "milk": "Vache, brebis ou bufflonne",
     "region": "Roumanie",
+"country": "Roumanie",
     "place": "Roumanie",
     "label": [],
     "price": [
@@ -1524,6 +1598,7 @@ season:"Toute l’année"
     "family": "Pâte fraîche en saumure",
     "milk": "Brebis ou vache",
     "region": "Bulgarie",
+"country": "Bulgarie",
     "place": "Balkans",
     "label": [],
     "price": [
@@ -1544,6 +1619,7 @@ season:"Toute l’année"
     "family": "Pâte fraîche en saumure",
     "milk": "Brebis, vache ou chèvre",
     "region": "Turquie",
+"country": "Turquie",
     "place": "Turquie",
     "label": [],
     "price": [
@@ -1564,6 +1640,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache ou brebis",
     "region": "Turquie",
+"country": "Turquie",
     "place": "Turquie",
     "label": [],
     "price": [
@@ -1584,6 +1661,7 @@ season:"Toute l’année"
     "family": "Pâte en saumure",
     "milk": "Vache ou brebis",
     "region": "Levant",
+"country": "Moyen-Orient",
     "place": "Liban, Syrie et Palestine",
     "label": [],
     "price": [
@@ -1604,6 +1682,7 @@ season:"Toute l’année"
     "family": "Pâte en saumure",
     "milk": "Brebis ou chèvre",
     "region": "Palestine",
+"country": "Palestine",
     "place": "Naplouse et Levant",
     "label": [],
     "price": [
@@ -1624,6 +1703,7 @@ season:"Toute l’année"
     "family": "Fromage frais acidifié",
     "milk": "Vache ou bufflonne",
     "region": "Inde",
+"country": "Inde",
     "place": "Sous-continent indien",
     "label": [],
     "price": [
@@ -1644,6 +1724,7 @@ season:"Toute l’année"
     "family": "Fromage frais acidifié",
     "milk": "Vache ou bufflonne",
     "region": "Inde",
+"country": "Inde",
     "place": "Odisha et Bengale",
     "label": [],
     "price": [
@@ -1664,6 +1745,7 @@ season:"Toute l’année"
     "family": "Fromage frais",
     "milk": "Vache",
     "region": "Mexique",
+"country": "Mexique",
     "place": "Mexique",
     "label": [],
     "price": [
@@ -1684,6 +1766,7 @@ season:"Toute l’année"
     "family": "Pâte dure",
     "milk": "Vache",
     "region": "Mexique",
+"country": "Mexique",
     "place": "Michoacán",
     "label": [],
     "price": [
@@ -1704,6 +1787,7 @@ season:"Toute l’année"
     "family": "Pâte filée",
     "milk": "Vache",
     "region": "Mexique",
+"country": "Mexique",
     "place": "Oaxaca",
     "label": [],
     "price": [
@@ -1724,6 +1808,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Mexique",
+"country": "Mexique",
     "place": "Chihuahua",
     "label": [],
     "price": [
@@ -1744,6 +1829,7 @@ season:"Toute l’année"
     "family": "Pâte filée",
     "milk": "Vache",
     "region": "Mexique",
+"country": "Mexique",
     "place": "Nord du Mexique",
     "label": [],
     "price": [
@@ -1764,6 +1850,7 @@ season:"Toute l’année"
     "family": "Fromage de chèvre",
     "milk": "Chèvre",
     "region": "Chili",
+"country": "Chili",
     "place": "Vallées du centre et du nord",
     "label": [],
     "price": [
@@ -1784,6 +1871,7 @@ season:"Toute l’année"
     "family": "Fromage frais",
     "milk": "Vache",
     "region": "Brésil",
+"country": "Brésil",
     "place": "Minas Gerais",
     "label": [],
     "price": [
@@ -1804,6 +1892,7 @@ season:"Toute l’année"
     "family": "Pâte semi-ferme",
     "milk": "Vache",
     "region": "Brésil",
+"country": "Brésil",
     "place": "Nordeste brésilien",
     "label": [],
     "price": [
@@ -1824,6 +1913,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Colombie",
+"country": "Colombie",
     "place": "Paipa, Boyacá",
     "label": [
       "PDO"
@@ -1846,6 +1936,7 @@ season:"Toute l’année"
     "family": "Fromage frais filé",
     "milk": "Vache",
     "region": "Nicaragua",
+"country": "Nicaragua",
     "place": "León et Chontales",
     "label": [],
     "price": [
@@ -1866,6 +1957,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Chili",
+"country": "Chili",
     "place": "Région centrale du Chili",
     "label": [],
     "price": [
@@ -1886,6 +1978,7 @@ season:"Toute l’année"
     "family": "Fromage frais pressé",
     "milk": "Vache",
     "region": "Venezuela",
+"country": "Venezuela",
     "place": "Plaines des Llanos",
     "label": [],
     "price": [
@@ -1906,6 +1999,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Paraguay",
+"country": "Paraguay",
     "place": "Colonies mennonites du Chaco",
     "label": [],
     "price": [
@@ -1926,6 +2020,7 @@ season:"Toute l’année"
     "family": "Fromage frais",
     "milk": "Vache",
     "region": "États-Unis",
+"country": "États-Unis",
     "place": "États-Unis",
     "label": [],
     "price": [
@@ -1946,6 +2041,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "États-Unis",
+"country": "États-Unis",
     "place": "Californie",
     "label": [],
     "price": [
@@ -1966,6 +2062,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "États-Unis",
+"country": "États-Unis",
     "place": "États-Unis",
     "label": [],
     "price": [
@@ -1986,6 +2083,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "États-Unis",
+"country": "États-Unis",
     "place": "Wisconsin",
     "label": [],
     "price": [
@@ -2006,6 +2104,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "États-Unis",
+"country": "États-Unis",
     "place": "Wisconsin",
     "label": [],
     "price": [
@@ -2026,6 +2125,7 @@ season:"Toute l’année"
     "family": "Fromage fondu",
     "milk": "Vache",
     "region": "États-Unis",
+"country": "États-Unis",
     "place": "États-Unis",
     "label": [],
     "price": [
@@ -2046,6 +2146,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Mexique",
+"country": "Mexique",
     "place": "Chihuahua",
     "label": [],
     "price": [
@@ -2066,6 +2167,7 @@ season:"Toute l’année"
     "family": "Fromage frais salé",
     "milk": "Vache",
     "region": "Colombie",
+"country": "Colombie",
     "place": "Côte caraïbe colombienne",
     "label": [],
     "price": [
@@ -2086,6 +2188,7 @@ season:"Toute l’année"
     "family": "Fromage frais",
     "milk": "Vache",
     "region": "Colombie",
+"country": "Colombie",
     "place": "Antioquia",
     "label": [],
     "price": [
@@ -2106,6 +2209,7 @@ season:"Toute l’année"
     "family": "Pâte molle",
     "milk": "Vache",
     "region": "Colombie",
+"country": "Colombie",
     "place": "Cundinamarca et Boyacá",
     "label": [],
     "price": [
@@ -2126,6 +2230,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Costa Rica",
+"country": "Costa Rica",
     "place": "Turrialba",
     "label": [
       "PDO"
@@ -2148,6 +2253,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Nicaragua",
+"country": "Nicaragua",
     "place": "Chontales",
     "label": [],
     "price": [
@@ -2168,6 +2274,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Argentine",
+"country": "Argentine",
     "place": "Argentine",
     "label": [],
     "price": [
@@ -2188,6 +2295,7 @@ season:"Toute l’année"
     "family": "Pâte dure",
     "milk": "Vache",
     "region": "Argentine",
+"country": "Argentine",
     "place": "Argentine",
     "label": [],
     "price": [
@@ -2208,6 +2316,7 @@ season:"Toute l’année"
     "family": "Fromage frais",
     "milk": "Vache",
     "region": "Argentine",
+"country": "Argentine",
     "place": "Argentine",
     "label": [],
     "price": [
@@ -2228,6 +2337,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Uruguay",
+"country": "Uruguay",
     "place": "Colonia del Sacramento et environs",
     "label": [],
     "price": [
@@ -2248,6 +2358,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Pérou",
+"country": "Pérou",
     "place": "Andes péruviennes",
     "label": [],
     "price": [
@@ -2268,6 +2379,7 @@ season:"Toute l’année"
     "family": "Fromage frais",
     "milk": "Vache",
     "region": "Pérou",
+"country": "Pérou",
     "place": "Pérou",
     "label": [],
     "price": [
@@ -2288,6 +2400,7 @@ season:"Toute l’année"
     "family": "Pâte filée",
     "milk": "Vache",
     "region": "République dominicaine",
+"country": "République dominicaine",
     "place": "République dominicaine",
     "label": [],
     "price": [
@@ -2308,6 +2421,7 @@ season:"Toute l’année"
     "family": "Fromage frais",
     "milk": "Vache",
     "region": "Caraïbes",
+"country": "Caraïbes",
     "place": "Caraïbes et Amérique latine",
     "label": [],
     "price": [
@@ -2328,6 +2442,7 @@ season:"Toute l’année"
     "family": "Fromage frais",
     "milk": "Vache",
     "region": "États-Unis",
+"country": "États-Unis",
     "place": "États-Unis",
     "label": [],
     "price": [
@@ -2348,6 +2463,7 @@ season:"Toute l’année"
     "family": "Pâte persillée",
     "milk": "Vache",
     "region": "États-Unis",
+"country": "États-Unis",
     "place": "États-Unis",
     "label": [],
     "price": [
@@ -2368,6 +2484,7 @@ season:"Toute l’année"
     "family": "Fromage frais en grains",
     "milk": "Vache",
     "region": "États-Unis",
+"country": "États-Unis",
     "place": "États-Unis",
     "label": [],
     "price": [
@@ -2388,6 +2505,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Danemark",
+"country": "Danemark",
     "place": "Fionie",
     "label": [],
     "price": [
@@ -2408,6 +2526,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Argentine",
+"country": "Argentine",
     "place": "Patagonie",
     "label": [],
     "price": [
@@ -2428,6 +2547,7 @@ season:"Toute l’année"
     "family": "Pâte filée",
     "milk": "Brebis ou vache",
     "region": "Balkans",
+"country": "Balkans",
     "place": "Bulgarie, Roumanie et Balkans",
     "label": [],
     "price": [
@@ -2448,6 +2568,7 @@ season:"Toute l’année"
     "family": "Fromage de brebis",
     "milk": "Brebis",
     "region": "Slovaquie",
+"country": "Slovaquie",
     "place": "Carpates",
     "label": [
       "PGI"
@@ -2470,6 +2591,7 @@ season:"Toute l’année"
     "family": "Préparation fromagère",
     "milk": "Vache ou brebis",
     "region": "Europe centrale",
+"country": "Europe centrale",
     "place": "Autriche, Slovaquie et Hongrie",
     "label": [],
     "price": [
@@ -2490,6 +2612,7 @@ season:"Toute l’année"
     "family": "Fromage frais",
     "milk": "Vache",
     "region": "Allemagne",
+"country": "Allemagne",
     "place": "Allemagne et Europe centrale",
     "label": [],
     "price": [
@@ -2510,6 +2633,7 @@ season:"Toute l’année"
     "family": "Pâte maigre affinée",
     "milk": "Vache",
     "region": "Allemagne",
+"country": "Allemagne",
     "place": "Harz",
     "label": [],
     "price": [
@@ -2530,6 +2654,7 @@ season:"Toute l’année"
     "family": "Pâte maigre affinée",
     "milk": "Vache",
     "region": "Allemagne",
+"country": "Allemagne",
     "place": "Hesse",
     "label": [],
     "price": [
@@ -2550,6 +2675,7 @@ season:"Toute l’année"
     "family": "Pâte molle à croûte lavée",
     "milk": "Vache",
     "region": "Belgique et Allemagne",
+"country": "Belgique et Allemagne",
     "place": "Limbourg historique",
     "label": [],
     "price": [
@@ -2570,6 +2696,7 @@ season:"Toute l’année"
     "family": "Pâte molle à croûte lavée",
     "milk": "Vache",
     "region": "Belgique",
+"country": "Belgique",
     "place": "Pays de Herve",
     "label": [
       "AOP"
@@ -2592,6 +2719,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Belgique",
+"country": "Belgique",
     "place": "Passendale, Flandre-Occidentale",
     "label": [],
     "price": [
@@ -2612,6 +2740,7 @@ season:"Toute l’année"
     "family": "Pâte demi-dure",
     "milk": "Vache",
     "region": "Belgique",
+"country": "Belgique",
     "place": "Abbaye de Maredsous",
     "label": [],
     "price": [
@@ -2632,6 +2761,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Pays-Bas",
+"country": "Pays-Bas",
     "place": "Pays-Bas",
     "label": [],
     "price": [
@@ -2652,6 +2782,7 @@ season:"Toute l’année"
     "family": "Fromage affiné en peau",
     "milk": "Brebis ou chèvre",
     "region": "Turquie",
+"country": "Turquie",
     "place": "Anatolie",
     "label": [],
     "price": [
@@ -2672,6 +2803,7 @@ season:"Toute l’année"
     "family": "Pâte filée",
     "milk": "Brebis ou vache",
     "region": "Bulgarie",
+"country": "Bulgarie",
     "place": "Bulgarie",
     "label": [],
     "price": [
@@ -2692,6 +2824,7 @@ season:"Toute l’année"
     "family": "Fromage frais acidifié",
     "milk": "Vache ou bufflonne",
     "region": "Inde",
+"country": "Inde",
     "place": "Inde",
     "label": [],
     "price": [
@@ -2712,6 +2845,7 @@ season:"Toute l’année"
     "family": "Fromage dur",
     "milk": "Yak ou vache",
     "region": "Népal",
+"country": "Népal",
     "place": "Himalaya népalais",
     "label": [],
     "price": [
@@ -2732,6 +2866,7 @@ season:"Toute l’année"
     "family": "Pâte pressée ou séchée",
     "milk": "Yak",
     "region": "Tibet et Himalaya",
+"country": "Tibet et Himalaya",
     "place": "Plateau tibétain et Himalaya",
     "label": [],
     "price": [
@@ -2752,6 +2887,7 @@ season:"Toute l’année"
     "family": "Fromage frais",
     "milk": "Vache",
     "region": "Égypte",
+"country": "Égypte",
     "place": "Égypte",
     "label": [],
     "price": [
@@ -2772,6 +2908,7 @@ season:"Toute l’année"
     "family": "Fromage en saumure",
     "milk": "Vache ou brebis",
     "region": "Moyen-Orient",
+"country": "Moyen-Orient",
     "place": "Péninsule arabique et Levant",
     "label": [],
     "price": [
@@ -2792,6 +2929,7 @@ season:"Toute l’année"
     "family": "Fromage frais",
     "milk": "Vache",
     "region": "Bénin",
+"country": "Bénin",
     "place": "Afrique de l’Ouest",
     "label": [],
     "price": [
@@ -2812,6 +2950,7 @@ season:"Toute l’année"
     "family": "Fromage frais",
     "milk": "Vache",
     "region": "Éthiopie",
+"country": "Éthiopie",
     "place": "Éthiopie",
     "label": [],
     "price": [
@@ -2832,6 +2971,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Chili",
+"country": "Chili",
     "place": "Chili",
     "label": [],
     "price": [
@@ -2852,6 +2992,7 @@ season:"Toute l’année"
     "family": "Pâte filée",
     "milk": "Vache",
     "region": "Venezuela",
+"country": "Venezuela",
     "place": "Venezuela",
     "label": [],
     "price": [
@@ -2872,6 +3013,7 @@ season:"Toute l’année"
     "family": "Fromage frais",
     "milk": "Vache",
     "region": "Venezuela",
+"country": "Venezuela",
     "place": "Guayana vénézuélienne",
     "label": [],
     "price": [
@@ -2892,6 +3034,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Pérou",
+"country": "Pérou",
     "place": "Puno et Andes péruviennes",
     "label": [],
     "price": [
@@ -2912,6 +3055,7 @@ season:"Toute l’année"
     "family": "Pâte pressée",
     "milk": "Vache",
     "region": "Amérique latine",
+"country": "Amérique latine",
     "place": "Amérique latine",
     "label": [],
     "price": [
@@ -2932,6 +3076,7 @@ season:"Toute l’année"
     "family": "Pâte pressée affinée",
     "milk": "Vache",
     "region": "Mexique",
+"country": "Mexique",
     "place": "Mexique",
     "label": [],
     "price": [
