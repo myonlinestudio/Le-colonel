@@ -18,11 +18,11 @@ async function loadCheesePhoto(id, img, retry = false) {
   }
   if (!retry && cheese.image) { img.src = cheese.image; return; }
   if (wrapper) { wrapper.classList.remove('image-failed'); wrapper.classList.add('image-loading'); }
-  const searches = [cheese.name, cheese.name + ' cheese', cheese.name + ' fromage'];
+  const searches = [cheese.name, '"' + cheese.name + '"', cheese.name + ' cheese', cheese.name + ' fromage'];
   try {
     let chosen = null;
     for (const term of searches) {
-      const endpoint = 'https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=' + encodeURIComponent('filetype:bitmap ' + term) + '&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Cextmetadata&iiurlwidth=1000&format=json&origin=*';
+      const endpoint = 'https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=' + encodeURIComponent(term) + '&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Cextmetadata&iiurlwidth=1000&format=json&origin=*';
       const response = await fetch(endpoint);
       if (!response.ok) continue;
       const data = await response.json();
