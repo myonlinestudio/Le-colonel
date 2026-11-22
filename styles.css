@@ -144,6 +144,7 @@ color:var(--forest);
 }
 
 .filter-box {
+display:none !important;
 background:var(--paper);
 border:1px solid var(--line);
 border-radius:18px;
