@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#172a23">
+<title>Le Colonel — L'univers des fromages</title>
+<meta name="description" content="Découvrez les fromages, leurs familles, leurs terroirs et leurs appellations.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+<a class="logo" href="index.html">LE <span>COLONEL</span> 🧀</a>
+<nav id="nav">
+<a href="#accueil">Accueil</a>
+<a href="#catalogue">Catalogue</a>
+<a href="#apropos">À propos</a>
+<a href="quiz.html">Quiz fromager</a>
+</nav>
+<button class="menu-btn" id="menuBtn">☰</button>
+</header>
+
+<section class="hero" id="accueil">
+<span class="kicker">Terroirs · Savoir-faire · Gourmandise</span>
+<h1>À la découverte du monde des fromages.</h1>
+<p>Du Livarot normand aux grandes meules des Alpes, explorez les fromages, leurs familles, leurs origines et leurs caractères.</p>
+<a class="btn" href="#catalogue">Explorer le catalogue →</a>
+</section>
+
+<section class="intro" id="apropos">
+<h2>Un patrimoine de goûts et de terroirs</h2>
+<p>Le Colonel est un guide de découverte des fromages. Apprenez à distinguer les grandes familles, à situer les lieux de production et à comprendre les signes officiels de qualité.</p>
+</section>
+
+<main id="catalogue">
+
+<div class="catalogue-heading">
+<div>
+<span class="kicker">Le répertoire</span>
+<h2>Le catalogue des fromages</h2>
+<p>Parcourez les fiches et affinez votre recherche.</p>
+</div>
+<a href="quiz.html">Tester mes connaissances ↗</a>
+</div>
+
+<section class="filter-box">
+<div class="filter-title">
+<h3>Filtres et recherche</h3>
+<button class="details-btn" onclick="resetFilters()">Réinitialiser</button>
+</div>
+
+<div class="controls">
+<input id="search" type="search" placeholder="Rechercher un fromage, une région, un label…">
+
+<select id="family">
+<option value="all">Toutes les familles</option>
+</select>
+
+<select id="milk">
+<option value="all">Tous les laits</option>
+</select>
+
+<select id="region">
+<option value="all">Toutes les régions</option>
+</select>
+
+<select id="label">
+<option value="all">Tous les labels</option>
+<option value="AOP">AOP</option>
+<option value="IGP">IGP</option>
+</select>
+
+<select id="sort">
+<option value="default">Ordre du catalogue</option>
+<option value="name">Nom A → Z</option>
+<option value="family">Famille A → Z</option>
+<option value="priceAsc">Prix croissant</option>
+<option value="priceDesc">Prix décroissant</option>
+</select>
+</div>
+</section>
+
+<div class="meta-row">
+<span id="resultCount">Chargement…</span>
+<span>Ouvre une fiche pour en savoir plus</span>
+</div>
+
+<section class="cheese-grid" id="cheeseGrid"></section>
+
+<div class="note">
+<strong>À propos des prix :</strong>
+les fourchettes sont indicatives au kilogramme et ne sont pas des tarifs en temps réel.
+Les prix varient selon le point de vente, la région et l'affinage.
+Les labels sont présentés à titre pédagogique.
+</div>
+
+</main>
+
+<footer>
+<strong>LE COLONEL</strong>
+<p>Un hommage au Livarot et à la richesse des terroirs fromagers.</p>
+<p>Catalogue pédagogique · Prix indicatifs · Informations à vérifier auprès des organismes officiels.</p>
+<p>© 2026 Le Colonel</p>
+</footer>
+
+<div class="modal" id="modal">
+<div class="modal-card" id="modalBody"></div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
