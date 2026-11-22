@@ -159,11 +159,15 @@ align-items:center;
 margin-bottom:15px;
 }
 
+.filter-toggle {width:auto;margin:0;padding:10px 16px}
 .filter-title h3 {
 font:normal 22px Georgia,serif;
 color:var(--forest);
 }
 
+.filter-actions {display:flex;gap:9px;align-items:center}
+.filter-box .controls {display:none}
+.filter-box.open .controls {display:grid}
 .controls {
 display:grid;
 grid-template-columns:2fr repeat(4,minmax(130px,1fr));
@@ -449,6 +453,8 @@ color:#f0d9a8;
 }
 
 @media(max-width:620px) {
+.filter-actions {flex-direction:column;align-items:stretch}
+.filter-actions .details-btn {width:100%}
 header {padding:12px 5%}
 .logo {font-size:20px}
 .menu-btn {display:block}
