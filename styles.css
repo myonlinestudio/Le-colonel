@@ -518,3 +518,45 @@ transition:color .2s ease, opacity .2s ease;
   .quiz-label {display:inline;font-size:12px}
   .quiz-icon {font-size:13px}
 }
+
+
+/* Petit bouton + pour déplier les filtres */
+.filter-title {margin-bottom:0}
+.filter-box.open .filter-title {margin-bottom:15px}
+.filter-toggle {
+width:34px;
+height:34px;
+min-width:34px;
+padding:0;
+margin:0;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+border:1px solid #d8d0c1;
+border-radius:50%;
+background:#fffdf8;
+color:var(--forest);
+font-family:Arial,sans-serif;
+font-size:23px;
+font-weight:400;
+line-height:1;
+cursor:pointer;
+transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease;
+}
+.filter-toggle:hover {
+background:var(--forest);
+border-color:var(--forest);
+color:#fff;
+}
+.filter-toggle:focus-visible {
+outline:2px solid var(--gold);
+outline-offset:3px;
+}
+.filter-box .controls {display:none !important}
+.filter-box.open .controls {display:grid !important}
+.filter-actions {display:flex;align-items:center;gap:10px}
+.reset-filter {display:none;width:auto;margin:0;padding:7px 12px;font-size:12px}
+.filter-box.open .reset-filter {display:inline-flex}
+@media(max-width:620px) {
+  .filter-actions {flex-direction:row;align-items:center}
+}
