@@ -485,53 +485,36 @@ main {padding:15px 16px 55px}
 }
 
 
-/* Accès rapide au quiz dans l'en-tête */
+/* Accès quiz : lien discret et minimaliste */
 .quiz-launch {
 display:inline-flex;
 align-items:center;
-justify-content:center;
-gap:9px;
-min-height:42px;
-padding:0 17px;
-border:1px solid rgba(255,255,255,.55);
-border-radius:24px;
-background:rgba(255,255,255,.08);
-color:#fff;
-font-size:13px;
-font-weight:700;
+gap:8px;
+padding:8px 2px 8px 12px;
+border:0;
+border-left:1px solid rgba(255,255,255,.22);
+border-radius:0;
+background:transparent;
+color:#f0dfbd;
+font:600 13px/1 Arial,sans-serif;
+letter-spacing:.35px;
 text-decoration:none;
 white-space:nowrap;
+transition:color .2s ease, opacity .2s ease;
 }
-.quiz-launch:hover {background:rgba(255,255,255,.16);border-color:#fff}
-.quiz-icon {font-size:19px;color:var(--gold);line-height:1}
-.filter-box {padding:12px 18px;margin:24px 0}
-.filter-title {margin:0}
-.filter-title h3 {margin:0;font-size:18px}
-.filter-box.open .filter-title {margin-bottom:15px}
-.filter-toggle {
-width:32px;
-height:32px;
-min-width:32px;
-padding:0;
-margin:0;
-display:inline-flex;
-align-items:center;
-justify-content:center;
-border:1px solid #d8d0c1;
-border-radius:50%;
-background:transparent;
-color:var(--forest);
-font-size:23px;
-font-weight:400;
-line-height:1;
-cursor:pointer;
-}
-.filter-toggle:hover {background:var(--forest);color:#fff}
-.reset-filter {display:none;width:auto;margin:0;padding:7px 12px;font-size:12px}
-.filter-box.open .reset-filter {display:inline-flex}
-.filter-actions {gap:10px}
+.quiz-launch:hover {color:#fff;opacity:.9}
+.quiz-icon {font-size:14px;color:var(--gold);line-height:1}
 @media(max-width:620px) {
-  .filter-actions {flex-direction:row;align-items:center}
-  .quiz-launch {width:42px;height:42px;min-height:42px;padding:0;border-radius:50%}
-  .quiz-label {display:none}
+  .quiz-launch {
+    width:auto;
+    height:auto;
+    min-height:0;
+    padding:8px 0 8px 10px;
+    border-left:1px solid rgba(255,255,255,.22);
+    border-radius:0;
+    background:transparent;
+    gap:6px;
+  }
+  .quiz-label {display:inline;font-size:12px}
+  .quiz-icon {font-size:13px}
 }
