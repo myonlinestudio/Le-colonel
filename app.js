@@ -36,8 +36,8 @@ return;
 grid.innerHTML = list.map(c => `
 <article class="cheese-card">
 
-<div class="cheese-visual" onerror="this.classList.add('image-failed')">
-<img src="${c.image}" alt="Photographie du fromage ${c.name}" loading="lazy"
+<div class="cheese-visual ${c.image ? '' : 'image-failed'}">
+<img src="${c.image || ""}" alt="Photographie du fromage ${c.name}" loading="lazy"
 onerror="this.parentElement.classList.add('image-failed')">
 <span class="image-fallback">${c.name}</span>
 <a class="image-credit" href="${c.imageSource}" target="_blank" rel="noopener">Photo : Wikimedia Commons</a>
@@ -134,7 +134,7 @@ $("#modalBody").innerHTML = `
 
 </div>
 
-<div class="modal-photo" onerror="this.classList.add('image-failed')">
+<div class="modal-photo ${c.image ? '' : 'image-failed'}">
 <img src="${c.image}" alt="Photographie du fromage ${c.name}"
 onerror="this.parentElement.classList.add('image-failed')">
 <span class="image-fallback">${c.name}</span>
