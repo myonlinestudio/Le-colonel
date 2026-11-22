@@ -247,7 +247,7 @@ le format et l'affinage.
 
 `;
 
-if (!c.image) loadCheesePhoto(c.id, $("#modalBody").querySelector("img[data-cheese-id]"));
+loadCheesePhoto(c.id, $("#modalBody").querySelector("img[data-cheese-id]"));
 $("#modal").classList.add("open");
 document.body.style.overflow="hidden";
 }
