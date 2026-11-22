@@ -47,11 +47,12 @@
 
 <section class="filter-box">
 <div class="filter-title">
-<h3>Filtres et recherche</h3>
-<button class="details-btn" onclick="resetFilters()">Réinitialiser</button>
+<h3>Explorer le catalogue</h3>
+<div class="filter-actions"><button class="details-btn filter-toggle" id="filterToggle" type="button" aria-expanded="false">Afficher les filtres ＋</button><button class="details-btn" onclick="resetFilters()">Réinitialiser</button></div>
 </div>
 
 <div class="controls">
+<select id="country"><option value="all">Tous les pays</option></select>
 <input id="search" type="search" placeholder="Rechercher un fromage, une région, un label…">
 
 <select id="family">
