@@ -451,7 +451,7 @@ color:#f0d9a8;
 }
 
 @media(max-width:900px) {
-.cheese-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+.cheese-grid {grid-template-columns:repeat(3,minmax(0,1fr))}
 .controls {grid-template-columns:repeat(2,minmax(0,1fr))}
 .controls input {grid-column:1/-1}
 }
@@ -477,7 +477,16 @@ nav.open {display:flex}
 main {padding:15px 16px 55px}
 .controls {grid-template-columns:1fr}
 .controls input {grid-column:auto}
-.cheese-grid {grid-template-columns:1fr;gap:16px}
+.cheese-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.cheese-visual {height:105px}
+.card-content {padding:9px}
+.card h3 {font-size:16px;line-height:1.15;overflow-wrap:anywhere}
+.family {font-size:10px;line-height:1.25}
+.label-list {gap:3px;margin:7px 0}
+.pill {font-size:9px;padding:4px 6px}
+.card-info {font-size:10px;gap:4px;flex-wrap:wrap;margin:7px 0}
+.details-btn {font-size:10px;padding:8px 4px;margin-top:4px}
+.image-credit {font-size:8px;padding:3px 5px;right:4px;bottom:4px}
 .catalogue-heading {display:block}
 .facts {grid-template-columns:1fr 1fr}
 .modal {padding:10px}
