@@ -1,17 +1,41 @@
 
 const $ = s => document.querySelector(s);
 
-const photoCache = (() => { try { return JSON.parse(localStorage.getItem("leColonelPhotoCache") || "{}"); } catch (_) { return {}; } })();
+const PHOTO_CACHE_VERSION = "cheese-only-v2";
+const photoCache = (() => {
+  try {
+    const saved = JSON.parse(localStorage.getItem("leColonelPhotoCache") || "{}");
+    return saved.version === PHOTO_CACHE_VERSION ? (saved.items || {}) : {};
+  } catch (_) { return {}; }
+})();
+function savePhotoCache() {
+  try { localStorage.setItem("leColonelPhotoCache", JSON.stringify({version:PHOTO_CACHE_VERSION,items:photoCache})); } catch (_) {}
+}
 async function probePhoto(url) {
   return new Promise(resolve => {
     const test = new Image();
-    const timer = setTimeout(() => resolve(false), 10000);
+    const timer = setTimeout(() => resolve(false), 9000);
     test.onload = () => { clearTimeout(timer); resolve(test.naturalWidth > 0); };
     test.onerror = () => { clearTimeout(timer); resolve(false); };
     test.src = url;
   });
 }
-
+function normalizedWords(value) {
+  return String(value || "").toLowerCase().normalize("NFD")
+    .replace(/[\\u0300-\\u036f]/g, "").replace(/[^a-z0-9]+/g, " ")
+    .trim().split(/\\s+/).filter(word => word.length > 2);
+}
+function cheeseImageScore(title, cheese) {
+  const normalized = String(title || "").toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g, "");
+  const words = normalizedWords(cheese.name);
+  const forbidden = /\\b(building|buildings|architecture|architectural|church|cathedral|castle|museum|house|hotel|street|town hall|station|bridge|monument|facade|facade|interior|exterior|tower|city hall|palace|abbey|school|university|mosque|temple)\\b/i;
+  if (forbidden.test(normalized)) return -100;
+  const hits = words.filter(word => normalized.includes(word)).length;
+  const coverage = words.length ? hits / words.length : 0;
+  const cheeseContext = /cheese|fromage|dairy|curd|whey|milk|food|cheeses/i.test(normalized);
+  if (coverage < (words.length <= 2 ? 0.5 : 0.6)) return -100;
+  return hits * 5 + (cheeseContext ? 5 : 0) + (coverage === 1 ? 4 : 0);
+}
 async function loadCheesePhoto(id, img, retry = false) {
   const cheese = CHEESES.find(item => item.id === id);
   if (!cheese || !img || img.dataset.loadingPhoto === "yes") return;
@@ -33,6 +57,8 @@ async function loadCheesePhoto(id, img, retry = false) {
       if (!img.dataset.retried) {
         img.dataset.retried = "yes";
         cheese.image = "";
+        delete photoCache[id];
+        savePhotoCache();
         loadCheesePhoto(id, img, true);
       } else {
         wrapper?.classList.remove('image-loading');
@@ -52,14 +78,13 @@ async function loadCheesePhoto(id, img, retry = false) {
     }
   };
 
-  if (!retry && cached?.url) {
-    if (await probePhoto(cached.url)) {
-      applyPhoto(cached.url, cached.source, cached.credit);
-      return;
-    }
-    delete photoCache[id];
-    try { localStorage.setItem('leColonelPhotoCache', JSON.stringify(photoCache)); } catch (_) {}
+  if (!retry && cached?.url && await probePhoto(cached.url)) {
+    applyPhoto(cached.url, cached.source, cached.credit);
+    return;
   }
+  if (cached) { delete photoCache[id]; savePhotoCache(); }
+
+  // Les images déjà renseignées dans la fiche sont conservées uniquement si elles chargent.
   if (!retry && cheese.image && await probePhoto(cheese.image)) {
     applyPhoto(cheese.image, cheese.imageSource, cheese.imageCredit);
     return;
@@ -70,53 +95,43 @@ async function loadCheesePhoto(id, img, retry = false) {
     wrapper.classList.add('image-loading');
   }
 
-  const searches = [
-    cheese.name + ' cheese',
+  const queries = [
     '"' + cheese.name + '" cheese',
-    cheese.name + ' fromage',
-    cheese.name
+    '"' + cheese.name + '" fromage',
+    cheese.name + ' cheese'
   ];
-  const terms = String(cheese.name).toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').split(/[^a-z0-9]+/).filter(t => t.length > 2);
-
   try {
-    let candidates = [];
-    for (const term of searches) {
-      const endpoint = 'https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=' + encodeURIComponent(term) + '&gsrnamespace=6&gsrlimit=20&prop=imageinfo&iiprop=url%7Cextmetadata&iiurlwidth=1000&format=json&origin=*';
+    const results = [];
+    for (const query of queries) {
+      const endpoint = 'https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch='
+        + encodeURIComponent(query) + '&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url%7Cextmetadata&iiurlwidth=1000&format=json&origin=*';
       const response = await fetch(endpoint);
       if (!response.ok) continue;
       const data = await response.json();
-      const pages = Object.values(data.query?.pages || {});
-      candidates = pages.filter(p => p.imageinfo?.[0]?.thumburl || p.imageinfo?.[0]?.url);
-      if (candidates.length) break;
-    }
-
-    candidates.sort((a, b) => {
-      const titleA = String(a.title || '').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
-      const titleB = String(b.title || '').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
-      const score = title => terms.reduce((n, token) => n + (title.includes(token) ? 2 : 0), 0) + (title.includes('cheese') || title.includes('fromage') ? 1 : 0);
-      return score(titleB) - score(titleA);
-    });
-
-    let selected = null;
-    for (const page of candidates.slice(0, 10)) {
-      const info = page.imageinfo[0];
-      const url = info.thumburl || info.url;
-      if (url && await probePhoto(url)) {
-        selected = {page, info, url};
-        break;
+      for (const page of Object.values(data.query?.pages || {})) {
+        const info = page.imageinfo?.[0];
+        const url = info?.thumburl || info?.url;
+        const score = cheeseImageScore(page.title, cheese);
+        if (url && score > 0 && !results.some(item => item.page.title === page.title)) {
+          results.push({page, info, url, score});
+        }
       }
     }
-    if (!selected) throw new Error('Aucune image valide trouvée pour ' + cheese.name);
+    results.sort((a,b) => b.score - a.score);
+    let selected = null;
+    for (const candidate of results.slice(0, 12)) {
+      if (await probePhoto(candidate.url)) { selected = candidate; break; }
+    }
+    if (!selected) throw new Error('Aucune photo de fromage suffisamment identifiable trouvée pour ' + cheese.name);
 
     const info = selected.info;
     const source = info.descriptionurl || 'https://commons.wikimedia.org/';
     const artist = info.extmetadata?.Artist?.value
-      ? info.extmetadata.Artist.value.replace(/<[^>]*>/g, '').trim()
-      : '';
+      ? info.extmetadata.Artist.value.replace(/<[^>]*>/g, '').trim() : '';
     const license = info.extmetadata?.LicenseShortName?.value || '';
     const creditText = [artist, license].filter(Boolean).join(' — ') || 'Wikimedia Commons';
-    photoCache[id] = {url:selected.url, source, credit:creditText};
-    try { localStorage.setItem('leColonelPhotoCache', JSON.stringify(photoCache)); } catch (_) {}
+    photoCache[id] = {url:selected.url, source, credit:creditText, title:selected.page.title};
+    savePhotoCache();
     applyPhoto(selected.url, source, creditText);
   } catch (error) {
     img.dataset.loadingPhoto = "no";
@@ -124,7 +139,7 @@ async function loadCheesePhoto(id, img, retry = false) {
       wrapper.classList.remove('image-loading');
       wrapper.classList.add('image-failed');
     }
-    console.warn('Photo indisponible pour ' + cheese.name, error);
+    console.warn('Photo de fromage indisponible pour ' + cheese.name, error);
   }
 }
 function handleImageError(id, img) {
