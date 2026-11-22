@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz fromager — Le Colonel</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+<a class="logo" href="index.html">LE <span>COLONEL</span> 🧀</a>
+<nav>
+<a href="index.html">Accueil</a>
+<a href="index.html#catalogue">Catalogue</a>
+</nav>
+</header>
+
+<main>
+
+<section class="quiz-hero">
+<span class="kicker">Le savoir se déguste</span>
+<h1>Le grand quiz du fromage</h1>
+<p>5 questions par partie pour devenir incollable.</p>
+</section>
+
+<section class="quiz-panel">
+
+<div class="stats">
+<div class="stat">
+<strong id="points">0</strong>
+<span>Points cumulés</span>
+</div>
+<div class="stat">
+<strong id="success">—</strong>
+<span>Réussite</span>
+</div>
+<div class="stat">
+<strong id="best">0</strong>
+<span>Meilleure série</span>
+</div>
+</div>
+
+<div id="levels">
+<h2>Choisis ton niveau</h2>
+
+<div class="levels">
+<button class="level" onclick="start('facile')">
+<strong>Découverte</strong>
+<small>Les bases du fromage</small>
+</button>
+
+<button class="level" onclick="start('intermediaire')">
+<strong>Connaisseur</strong>
+<small>Familles et terroirs</small>
+</button>
+
+<button class="level" onclick="start('expert')">
+<strong>Expert</strong>
+<small>Questions avancées</small>
+</button>
+</div>
+</div>
+
+<div id="questionArea" class="hidden"></div>
+
+<p><a href="index.html">← Retour au catalogue</a></p>
+
+</section>
+</main>
+
+<footer>
+<strong>LE COLONEL</strong>
+<p>À vous de jouer, et bonne dégustation !</p>
+</footer>
+
+<script src="quiz.js"></script>
+</body>
+</html>
