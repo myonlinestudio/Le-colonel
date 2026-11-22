@@ -17,8 +17,9 @@
 <a href="#accueil">Accueil</a>
 <a href="#catalogue">Catalogue</a>
 <a href="#apropos">À propos</a>
-<a href="quiz.html">Quiz fromager</a>
+
 </nav>
+<a class="quiz-launch" href="quiz.html" aria-label="Accéder au quiz fromager"><span class="quiz-icon" aria-hidden="true">✦</span><span class="quiz-label">Quiz fromager</span></a>
 <button class="menu-btn" id="menuBtn">☰</button>
 </header>
 
@@ -40,15 +41,15 @@
 <div>
 <span class="kicker">Le répertoire</span>
 <h2>Le catalogue des fromages</h2>
-<p>Parcourez les fiches et affinez votre recherche.</p>
+
 </div>
-<a href="quiz.html">Tester mes connaissances ↗</a>
+
 </div>
 
 <section class="filter-box">
 <div class="filter-title">
-<h3>Explorer le catalogue</h3>
-<div class="filter-actions"><button class="details-btn filter-toggle" id="filterToggle" type="button" aria-expanded="false">Afficher les filtres ＋</button><button class="details-btn" onclick="resetFilters()">Réinitialiser</button></div>
+<h3>Filtres</h3>
+<div class="filter-actions"><button class="filter-toggle" id="filterToggle" type="button" aria-label="Ouvrir les filtres" aria-expanded="false">+</button><button class="details-btn reset-filter" onclick="resetFilters()">Réinitialiser</button></div>
 </div>
 
 <div class="controls">
