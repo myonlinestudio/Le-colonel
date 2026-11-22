@@ -1,0 +1,428 @@
+
+:root {
+--forest:#253d32;
+--forest2:#172a23;
+--cream:#f5f1e7;
+--paper:#fffdf8;
+--ink:#292b25;
+--muted:#77766d;
+--gold:#c8a66b;
+--wine:#713f35;
+--line:#e7dfd0;
+--shadow:0 12px 35px rgba(35,39,30,.09);
+}
+
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+
+body {
+margin:0;
+background:var(--cream);
+color:var(--ink);
+font-family:Arial,sans-serif;
+}
+
+button,input,select {font:inherit}
+button,a {-webkit-tap-highlight-color:transparent}
+
+header {
+position:sticky;
+top:0;
+z-index:20;
+background:var(--forest2);
+color:white;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:14px 5%;
+box-shadow:0 5px 18px #15241c24;
+}
+
+.logo {
+font:700 25px Georgia,serif;
+letter-spacing:2px;
+color:#f3e6ca;
+text-decoration:none;
+}
+
+.logo span {color:var(--gold)}
+
+nav {display:flex;gap:22px}
+nav a {color:white;text-decoration:none;font-size:14px}
+nav a:hover {color:var(--gold)}
+
+.menu-btn {
+display:none;
+border:1px solid #ffffff55;
+border-radius:50%;
+background:transparent;
+color:white;
+width:42px;
+height:42px;
+font-size:20px;
+}
+
+.hero {
+min-height:420px;
+padding:76px 7%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+color:white;
+background:linear-gradient(90deg,#182b23ed,#182b2370),radial-gradient(ellipse at 75% 35%,#b77e3b,#1c3026);
+}
+
+.kicker {
+text-transform:uppercase;
+letter-spacing:3px;
+color:#e2c68e;
+font-size:12px;
+font-weight:bold;
+}
+
+.hero h1 {
+font:normal clamp(40px,6vw,68px)/1.04 Georgia,serif;
+max-width:720px;
+margin:18px 0;
+}
+
+.hero p {
+max-width:590px;
+line-height:1.8;
+color:#f2ecdf;
+font-size:17px;
+}
+
+.btn {
+display:inline-flex;
+justify-content:center;
+align-items:center;
+border:0;
+border-radius:30px;
+padding:14px 23px;
+background:var(--gold);
+color:#25271f;
+font-weight:bold;
+text-decoration:none;
+cursor:pointer;
+}
+
+.intro {
+text-align:center;
+padding:58px 20px 26px;
+}
+
+.intro h2,.section-title {
+font:normal clamp(28px,4vw,40px) Georgia,serif;
+color:var(--forest);
+}
+
+.intro p {
+max-width:720px;
+margin:auto;
+color:var(--muted);
+line-height:1.7;
+}
+
+main {
+max-width:1240px;
+margin:auto;
+padding:24px 24px 80px;
+}
+
+.catalogue-heading {
+display:flex;
+align-items:end;
+justify-content:space-between;
+gap:16px;
+margin:20px 0;
+}
+
+.catalogue-heading h2 {
+font:normal 32px Georgia,serif;
+color:var(--forest);
+}
+
+.filter-box {
+background:var(--paper);
+border:1px solid var(--line);
+border-radius:18px;
+padding:20px;
+margin:24px 0;
+box-shadow:var(--shadow);
+}
+
+.filter-title {
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
+}
+
+.filter-title h3 {
+font:normal 22px Georgia,serif;
+color:var(--forest);
+}
+
+.controls {
+display:grid;
+grid-template-columns:2fr repeat(4,minmax(130px,1fr));
+gap:10px;
+}
+
+.controls input,.controls select {
+width:100%;
+min-width:0;
+padding:13px 14px;
+border:1px solid #dcd7cb;
+border-radius:12px;
+background:white;
+}
+
+.meta-row {
+display:flex;
+justify-content:space-between;
+color:var(--muted);
+font-size:13px;
+margin:18px 2px;
+}
+
+.cheese-grid {
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:22px;
+}
+
+.cheese-card {
+background:var(--paper);
+border:1px solid #e9e1d4;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 5px 20px #25291f0a;
+transition:.2s;
+}
+
+.cheese-card:hover {
+transform:translateY(-5px);
+box-shadow:var(--shadow);
+}
+
+.cheese-visual {
+height:185px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:radial-gradient(circle at 50% 45%,#fff9e7,#d9c49a 60%,#b49a70);
+position:relative;
+}
+
+.cheese-visual:before {
+content:"";
+position:absolute;
+width:145px;
+height:145px;
+border-radius:50%;
+background:radial-gradient(circle at 35% 30%,#fff3c9,#d7a94e 70%,#93652c);
+box-shadow:0 15px 24px #35231338;
+border:7px solid #f0dba7;
+}
+
+.cheese-visual span {
+position:relative;
+z-index:1;
+font:italic 16px Georgia,serif;
+color:#573e24;
+text-align:center;
+max-width:130px;
+}
+
+.card-content {padding:19px}
+
+.card h3 {
+font:normal 23px Georgia,serif;
+color:var(--forest);
+margin:0 0 7px;
+}
+
+.family {
+font-size:12px;
+color:var(--muted);
+}
+
+.label-list {
+display:flex;
+flex-wrap:wrap;
+gap:6px;
+margin:10px 0 14px;
+}
+
+.pill {
+padding:5px 9px;
+border-radius:30px;
+background:#edf0e8;
+color:#355341;
+font-size:11px;
+font-weight:bold;
+}
+
+.pill.aop {
+background:#f3ead6;
+color:#795b25;
+}
+
+.pill.igp {
+background:#e8eee8;
+color:#385f47;
+}
+
+.card-info {
+display:flex;
+justify-content:space-between;
+gap:10px;
+color:#66685f;
+font-size:13px;
+margin:10px 0;
+}
+
+.price {font-weight:bold;color:var(--wine)}
+
+.details-btn {
+width:100%;
+border:1px solid #d8d0c1;
+background:transparent;
+border-radius:24px;
+padding:11px;
+color:var(--forest);
+font-weight:bold;
+cursor:pointer;
+margin-top:7px;
+}
+
+.details-btn:hover {
+background:var(--forest);
+color:white;
+}
+
+.note {
+padding:16px 18px;
+border-left:3px solid var(--gold);
+background:#f0eadc;
+color:#68665d;
+border-radius:8px;
+font-size:12px;
+line-height:1.7;
+margin:24px 0;
+}
+
+.modal {
+display:none;
+position:fixed;
+inset:0;
+background:#111a17b8;
+z-index:40;
+padding:20px;
+align-items:center;
+justify-content:center;
+}
+
+.modal.open {display:flex}
+
+.modal-card {
+width:min(760px,100%);
+max-height:90vh;
+overflow:auto;
+background:var(--paper);
+border-radius:20px;
+padding:28px;
+}
+
+.modal-head {
+display:flex;
+justify-content:space-between;
+align-items:start;
+}
+
+.modal-head h2 {
+font:normal 32px Georgia,serif;
+color:var(--forest);
+}
+
+.close {
+border:0;
+background:#eee8dc;
+border-radius:50%;
+width:40px;
+height:40px;
+font-size:24px;
+cursor:pointer;
+}
+
+.facts {
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin:22px 0;
+}
+
+.fact {
+background:#f4f1e9;
+padding:14px;
+border-radius:12px;
+}
+
+.fact span {
+display:block;
+color:#888174;
+font-size:10px;
+text-transform:uppercase;
+margin-bottom:6px;
+}
+
+.fact strong {font-size:14px;color:#30382f}
+
+.modal-card p {line-height:1.75;color:#575950}
+
+footer {
+background:var(--forest2);
+color:#e8e0d1;
+text-align:center;
+padding:38px 20px;
+line-height:1.8;
+}
+
+footer strong {
+font:normal 24px Georgia,serif;
+color:#f0d9a8;
+}
+
+@media(max-width:900px) {
+.cheese-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+.controls {grid-template-columns:repeat(2,minmax(0,1fr))}
+.controls input {grid-column:1/-1}
+}
+
+@media(max-width:620px) {
+header {padding:12px 5%}
+.logo {font-size:20px}
+.menu-btn {display:block}
+nav {
+display:none;
+position:absolute;
+top:68px;
+left:0;
+right:0;
+padding:18px 6%;
+background:var(--forest2);
+flex-direction:column;
+}
+nav.open {display:flex}
+.hero {min-height:370px;padding:55px 7%}
+main {padding:15px 16px 55px}
+.controls {grid-template-columns:1fr}
+.controls input {grid-column:auto}
+.cheese-grid {grid-template-columns:1fr;gap:16px}
+.catalogue-heading {display:block}
+.facts {grid-template-columns:1fr 1fr}
+.modal {padding:10px}
+.modal-card {padding:20px}
+}
