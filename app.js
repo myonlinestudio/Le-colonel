@@ -79,19 +79,21 @@ const q = clean($("#search").value);
 const family = $("#family").value;
 const milk = $("#milk").value;
 const region = $("#region").value;
+const country = $("#country").value;
 const label = $("#label").value;
 const sort = $("#sort").value;
 
 let arr = CHEESES.filter(c =>
 
 (!q || clean([
-c.name,c.family,c.milk,c.region,
+c.name,c.family,c.milk,c.region,c.country,
 c.place,c.description,c.taste
 ].join(" ")).includes(q))
 
 && (family === "all" || c.family === family)
 && (milk === "all" || c.milk === milk)
 && (region === "all" || c.region === region)
+&& (country === "all" || (c.country || c.region) === country)
 && (label === "all" || c.label.includes(label))
 
 );
@@ -214,7 +216,7 @@ document.body.style.overflow="";
 
 function resetFilters() {
 
-["search","family","milk","region","label","sort"]
+["search","family","milk","region","country","label","sort"]
 .forEach(id => {
 
 const el = document.getElementById(id);
@@ -250,12 +252,23 @@ $("#region").insertAdjacentHTML("beforeend",
 `<option>${r}</option>`);
 });
 
-["search","family","milk","region","label","sort"]
+["search","family","milk","region","country","label","sort"]
 .forEach(id=>{
 document.getElementById(id).addEventListener(
 id==="search"?"input":"change",
 applyFilters
 );
+});
+
+$("#filterToggle").addEventListener("click",()=>{
+const box = document.querySelector(".filter-box");
+const opened = box.classList.toggle("open");
+$("#filterToggle").textContent = opened ? "Masquer les filtres −" : "Afficher les filtres ＋";
+$("#filterToggle").setAttribute("aria-expanded", String(opened));
+});
+
+[...new Set(CHEESES.map(c=>c.country || c.region))].sort((x,y)=>x.localeCompare(y,"fr")).forEach(country=>{
+$("#country").insertAdjacentHTML("beforeend", `<option value="${country}">${country}</option>`);
 });
 
 $("#menuBtn").addEventListener("click",()=>{
