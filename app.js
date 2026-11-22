@@ -200,7 +200,6 @@ $("#modalBody").innerHTML = `
 <span class="image-fallback">${c.name}</span>
 </div>
 <p class="photo-credit">Crédit photo : <a data-photo-credit="${c.id}" href="${c.imageSource || "https://commons.wikimedia.org/"}" target="_blank" rel="noopener">${c.imageCredit || "Wikimedia Commons"}</a></p>
-<p class="photo-credit">Crédit photo : <a href="${c.imageSource}" target="_blank" rel="noopener">${c.imageCredit}</a></p>
 
 <p>${c.description}</p>
 
