@@ -208,33 +208,80 @@ box-shadow:var(--shadow);
 }
 
 .cheese-visual {
-height:185px;
-display:flex;
+height:210px;
+position:relative;
+overflow:hidden;
+background:linear-gradient(135deg,#eee4d0,#c7b28d);
+}
+
+.cheese-visual img {
+display:block;
+width:100%;
+height:100%;
+object-fit:cover;
+transition:transform .45s ease;
+}
+
+.cheese-card:hover .cheese-visual img {transform:scale(1.045)}
+
+.image-fallback {
+display:none;
+position:absolute;
+inset:0;
 align-items:center;
 justify-content:center;
-background:radial-gradient(circle at 50% 45%,#fff9e7,#d9c49a 60%,#b49a70);
-position:relative;
-}
-
-.cheese-visual:before {
-content:"";
-position:absolute;
-width:145px;
-height:145px;
-border-radius:50%;
-background:radial-gradient(circle at 35% 30%,#fff3c9,#d7a94e 70%,#93652c);
-box-shadow:0 15px 24px #35231338;
-border:7px solid #f0dba7;
-}
-
-.cheese-visual span {
-position:relative;
-z-index:1;
-font:italic 16px Georgia,serif;
+padding:20px;
+font:italic 22px Georgia,serif;
 color:#573e24;
 text-align:center;
-max-width:130px;
+background:radial-gradient(circle at 50% 45%,#fff9e7,#d9c49a 60%,#b49a70);
 }
+
+.cheese-visual.image-failed .image-fallback,
+.modal-photo.image-failed .image-fallback {display:flex}
+
+.cheese-visual.image-failed img,
+.modal-photo.image-failed img {display:none}
+
+.image-credit {
+position:absolute;
+right:9px;
+bottom:9px;
+padding:5px 8px;
+border-radius:20px;
+background:#172a23c9;
+color:#fff;
+font-size:10px;
+text-decoration:none;
+}
+
+.image-credit:hover {background:#172a23}
+
+.modal-photo {
+height:260px;
+margin:18px 0 8px;
+position:relative;
+overflow:hidden;
+border-radius:14px;
+background:linear-gradient(135deg,#eee4d0,#c7b28d);
+}
+
+.modal-photo img {
+width:100%;
+height:100%;
+display:block;
+object-fit:cover;
+}
+
+.modal-photo .image-fallback {font-size:26px}
+
+.photo-credit {
+margin:0 0 16px;
+font-size:11px;
+color:var(--muted);
+}
+
+.photo-credit a {color:var(--forest)}
 
 .card-content {padding:19px}
 
