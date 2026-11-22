@@ -1,15 +1,15 @@
 
 :root {
---forest:#253d32;
---forest2:#172a23;
---cream:#f5f1e7;
---paper:#fffdf8;
---ink:#292b25;
---muted:#77766d;
---gold:#c8a66b;
---wine:#713f35;
---line:#e7dfd0;
---shadow:0 12px 35px rgba(35,39,30,.09);
+--forest:#526b5d;
+--forest2:#f7f5ef;
+--cream:#fbfaf6;
+--paper:#ffffff;
+--ink:#343a34;
+--muted:#85877f;
+--gold:#b99b68;
+--wine:#8b6d58;
+--line:#ece9e1;
+--shadow:0 12px 32px rgba(60,65,55,.07);
 }
 
 * {box-sizing:border-box}
@@ -29,34 +29,34 @@ header {
 position:sticky;
 top:0;
 z-index:20;
-background:var(--forest2);
-color:white;
+background:rgba(255,255,255,.94);
+color:var(--ink);
 display:flex;
 align-items:center;
 justify-content:space-between;
 padding:14px 5%;
-box-shadow:0 5px 18px #15241c24;
+box-shadow:0 4px 18px rgba(45,55,45,.06);
 }
 
 .logo {
 font:700 25px Georgia,serif;
 letter-spacing:2px;
-color:#f3e6ca;
+color:var(--forest);
 text-decoration:none;
 }
 
 .logo span {color:var(--gold)}
 
 nav {display:flex;gap:22px}
-nav a {color:white;text-decoration:none;font-size:14px}
+nav a {color:#59665c;text-decoration:none;font-size:14px}
 nav a:hover {color:var(--gold)}
 
 .menu-btn {
 display:none;
-border:1px solid #ffffff55;
+border:1px solid #dcded5;
 border-radius:50%;
 background:transparent;
-color:white;
+color:var(--forest);
 width:42px;
 height:42px;
 font-size:20px;
@@ -68,14 +68,14 @@ padding:76px 7%;
 display:flex;
 flex-direction:column;
 justify-content:center;
-color:white;
-background:linear-gradient(90deg,#182b23ed,#182b2370),radial-gradient(ellipse at 75% 35%,#b77e3b,#1c3026);
+color:var(--ink);
+background:linear-gradient(115deg,#f4f0e6,#eee9dc 55%,#e8e5d9);
 }
 
 .kicker {
 text-transform:uppercase;
 letter-spacing:3px;
-color:#e2c68e;
+color:#9b8052;
 font-size:12px;
 font-weight:bold;
 }
@@ -89,7 +89,7 @@ margin:18px 0;
 .hero p {
 max-width:590px;
 line-height:1.8;
-color:#f2ecdf;
+color:#686e65;
 font-size:17px;
 }
 
@@ -98,10 +98,10 @@ display:inline-flex;
 justify-content:center;
 align-items:center;
 border:0;
-border-radius:30px;
+border-radius:999px;
 padding:14px 23px;
-background:var(--gold);
-color:#25271f;
+background:#d9c6a1;
+color:#39443b;
 font-weight:bold;
 text-decoration:none;
 cursor:pointer;
@@ -147,7 +147,7 @@ color:var(--forest);
 display:block;
 background:var(--paper);
 border:1px solid var(--line);
-border-radius:18px;
+border-radius:22px;
 padding:20px;
 margin:24px 0;
 box-shadow:var(--shadow);
@@ -201,7 +201,7 @@ gap:22px;
 .cheese-card {
 background:var(--paper);
 border:1px solid #e9e1d4;
-border-radius:18px;
+border-radius:22px;
 overflow:hidden;
 box-shadow:0 5px 20px #25291f0a;
 transition:.2s;
@@ -313,21 +313,21 @@ margin:10px 0 14px;
 
 .pill {
 padding:5px 9px;
-border-radius:30px;
-background:#edf0e8;
-color:#355341;
+border-radius:999px;
+background:#f0f2ed;
+color:#596d5e;
 font-size:11px;
 font-weight:bold;
 }
 
 .pill.aop {
-background:#f3ead6;
-color:#795b25;
+background:#f5f0e5;
+color:#92794e;
 }
 
 .pill.igp {
-background:#e8eee8;
-color:#385f47;
+background:#edf2ed;
+color:#627a68;
 }
 
 .card-info {
@@ -354,7 +354,7 @@ margin-top:7px;
 }
 
 .details-btn:hover {
-background:var(--forest);
+background:#718777;
 color:white;
 }
 
@@ -438,8 +438,8 @@ margin-bottom:6px;
 .modal-card p {line-height:1.75;color:#575950}
 
 footer {
-background:var(--forest2);
-color:#e8e0d1;
+background:#f1efe8;
+color:#626a60;
 text-align:center;
 padding:38px 20px;
 line-height:1.8;
@@ -447,7 +447,7 @@ line-height:1.8;
 
 footer strong {
 font:normal 24px Georgia,serif;
-color:#f0d9a8;
+color:var(--forest);
 }
 
 @media(max-width:900px) {
@@ -469,7 +469,7 @@ top:68px;
 left:0;
 right:0;
 padding:18px 6%;
-background:var(--forest2);
+background:#fff;
 flex-direction:column;
 }
 nav.open {display:flex}
@@ -501,17 +501,17 @@ align-items:center;
 gap:8px;
 padding:8px 2px 8px 12px;
 border:0;
-border-left:1px solid rgba(255,255,255,.22);
+border-left:1px solid #e2e3dc;
 border-radius:0;
 background:transparent;
-color:#f0dfbd;
+color:#53675a;
 font:600 13px/1 Arial,sans-serif;
 letter-spacing:.35px;
 text-decoration:none;
 white-space:nowrap;
 transition:color .2s ease, opacity .2s ease;
 }
-.quiz-launch:hover {color:#fff;opacity:.9}
+.quiz-launch:hover {color:#7b8e7f;opacity:.9}
 .quiz-icon {font-size:14px;color:var(--gold);line-height:1}
 @media(max-width:620px) {
   .quiz-launch {
@@ -519,7 +519,7 @@ transition:color .2s ease, opacity .2s ease;
     height:auto;
     min-height:0;
     padding:8px 0 8px 10px;
-    border-left:1px solid rgba(255,255,255,.22);
+    border-left:1px solid #e2e3dc;
     border-radius:0;
     background:transparent;
     gap:6px;
@@ -568,4 +568,53 @@ outline-offset:3px;
 .filter-box.open .reset-filter {display:inline-flex}
 @media(max-width:620px) {
   .filter-actions {flex-direction:row;align-items:center}
+}
+
+
+/* Direction artistique claire et raffinée */
+body {background:#fbfaf7;color:#343a34}
+header {backdrop-filter:blur(12px); border-bottom:1px solid #eceae3}
+.logo {letter-spacing:1.7px}
+.logo span {color:#b49a6b}
+nav a {transition:color .2s ease}
+nav a:hover {color:#a58b5d}
+.hero {
+ background:linear-gradient(115deg,rgba(250,248,241,.98),rgba(239,237,226,.94));
+ color:#3f4a40;
+}
+.hero h1 {color:#46594b}
+.hero p {color:#70766d}
+.kicker {color:#9b8258}
+.btn,.details-btn,.filter-toggle,.menu-btn,.close {
+ border-radius:999px;
+}
+.btn {background:#d9c9a9;color:#3d493f;box-shadow:0 4px 12px rgba(90,80,55,.08)}
+.btn:hover {background:#cdb991}
+.filter-box,.cheese-card,.modal-card {
+ border:1px solid #eeece5;
+ box-shadow:0 7px 24px rgba(56,64,54,.045);
+}
+.cheese-card {border-radius:20px}
+.cheese-card:hover {box-shadow:0 13px 28px rgba(56,64,54,.09)}
+.controls input,.controls select {
+ border-radius:999px;
+ border-color:#e8e7df;
+ background:#fff;
+}
+.details-btn {
+ border-color:#e4e5dc;
+ background:#f8f8f4;
+ color:#5b705f;
+}
+.details-btn:hover {background:#718777;color:white;border-color:#718777}
+.filter-toggle {background:#f7f7f2;border-color:#e4e5dc;color:#5b705f}
+.filter-toggle:hover {background:#718777;border-color:#718777;color:white}
+.pill {border-radius:999px}
+.image-credit {border-radius:999px}
+.note {background:#f5f2e9;border-left-color:#c6ad7d}
+footer {background:#f1efe8;color:#70766d}
+footer strong {color:#53675a}
+@media(max-width:620px) {
+ nav.open {background:#fff;border-bottom:1px solid #eeece5}
+ .menu-btn {background:#fff}
 }
