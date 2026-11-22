@@ -322,7 +322,8 @@ applyFilters
 $("#filterToggle").addEventListener("click",()=>{
 const box = document.querySelector(".filter-box");
 const opened = box.classList.toggle("open");
-$("#filterToggle").textContent = opened ? "Masquer les filtres −" : "Afficher les filtres ＋";
+$("#filterToggle").textContent = opened ? "−" : "+";
+$("#filterToggle").setAttribute("aria-label", opened ? "Fermer les filtres" : "Ouvrir les filtres");
 $("#filterToggle").setAttribute("aria-expanded", String(opened));
 });
 
