@@ -86,7 +86,7 @@ countries.forEach(country=>{
  b.addEventListener('click',()=>{
  document.querySelectorAll('.country-card').forEach(x=>x.classList.remove('active'));b.classList.add('active');
  if(country==='France'){panel.classList.add('active');panel.scrollIntoView({behavior:'smooth',block:'start'});}
- else {panel.classList.remove('active');document.getElementById('regionResults').innerHTML='';}
+ else {panel.classList.remove('active');let old=document.getElementById('comingPanel');if(!old){old=document.createElement('div');old.id='comingPanel';old.className='empty-state';grid.after(old);}old.textContent='La carte régionale de '+country+' sera ajoutée dans une prochaine étape. Les fromages de ce pays sont déjà présents dans le catalogue.';old.scrollIntoView({behavior:'smooth',block:'center'});}
  });grid.appendChild(b);
 });
 function showRegion(region){
