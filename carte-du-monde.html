@@ -22,8 +22,10 @@
 .world-note{margin-top:16px;color:#898b82;font-size:12px;line-height:1.6}
 .country-panel{display:none;margin-top:30px}
 .country-panel.active{display:block}
-.france-map{position:relative;max-width:760px;margin:22px auto 26px;min-height:420px;border-radius:24px;background:radial-gradient(ellipse at center,#f8f8f2,#f0eee6);overflow:hidden;border:1px solid #e9e6dd}
-.france-shape{position:absolute;left:50%;top:50%;width:min(60%,390px);height:82%;transform:translate(-50%,-50%);background:#dce5d9;clip-path:polygon(34% 0,62% 5%,74% 19%,91% 28%,84% 44%,100% 58%,80% 72%,72% 91%,53% 100%,39% 88%,22% 92%,17% 75%,0 62%,12% 45%,8% 26%,25% 17%);border:1px solid #b9c9b8}
+.france-map{position:relative;max-width:760px;margin:22px auto 26px;aspect-ratio:2000/1898;border-radius:24px;background:#f8f7f2;overflow:hidden;border:1px solid #e9e6dd;padding:12px}
+.france-map-image{display:block;width:100%;height:100%;object-fit:contain;filter:grayscale(1) sepia(.13) hue-rotate(65deg) saturate(.55);opacity:.88}
+.france-map::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,#f6f3e9aa,#e8eee4aa);mix-blend-mode:screen}
+.france-map .region-dot{z-index:3}
 .region-dot{position:absolute;z-index:2;transform:translate(-50%,-50%);border:1px solid #fff;background:#607b66;color:white;border-radius:999px;padding:8px 12px;font-size:12px;box-shadow:0 3px 12px #25352525;cursor:pointer;white-space:nowrap}
 .region-dot:hover,.region-dot.active{background:#b49a6b;box-shadow:0 0 0 4px #b49a6b30}
 .map-caption{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#85887e;font-size:11px}
@@ -34,7 +36,7 @@
 .cheese-mini strong{display:block;font:normal 18px Georgia,serif;color:#526b5d;margin-bottom:6px}
 .cheese-mini span{font-size:12px;color:#85877f}
 .empty-state{padding:20px;border-radius:14px;background:#f5f2e9;color:#777d73;line-height:1.6}
-@media(max-width:620px){.atlas-wrap{padding:24px 15px 55px}.france-map{min-height:370px}.france-shape{width:67%;height:78%}.region-dot{font-size:10px;padding:7px 9px}.atlas-hero{padding:48px 7% 30px}}
+@media(max-width:620px){.atlas-wrap{padding:24px 15px 55px}.france-map{min-height:0;padding:8px}.region-dot{font-size:10px;padding:7px 9px}.atlas-hero{padding:48px 7% 30px}}
 </style>
 </head>
 <body>
@@ -61,8 +63,8 @@
 <p class="world-note">Les pays proposés sont ceux actuellement représentés dans le catalogue. Les régions ne sont affichées que lorsqu'une localisation régionale est renseignée.</p>
 <section class="country-panel" id="francePanel">
 <div class="atlas-top"><h2>🇫🇷 France · Explorer les régions</h2><a class="back-link" href="#" id="allCountries">← Tous les pays</a></div>
-<div class="france-map" aria-label="Carte schématique de France avec régions fromagères interactives">
-<div class="france-shape"></div>
+<div class="france-map" aria-label="Carte administrative de France métropolitaine et Corse, avec repères fromagers interactifs">
+<img class="france-map-image" src="https://commons.wikimedia.org/wiki/Special:FilePath/France_map_Lambert-93_with_regions_and_departments_polygons-blank.svg" alt="Carte vierge de France avec les limites administratives des régions" loading="lazy">
 <button class="region-dot" style="left:52%;top:19%" data-region="Normandie">Normandie</button>
 <button class="region-dot" style="left:70%;top:43%" data-region="Alsace">Alsace</button>
 <button class="region-dot" style="left:63%;top:76%" data-region="Savoie">Savoie</button>
@@ -70,7 +72,7 @@
 <button class="region-dot" style="left:30%;top:70%" data-region="Aveyron">Aveyron</button>
 <button class="region-dot" style="left:28%;top:43%" data-region="Touraine">Touraine</button>
 <button class="region-dot" style="left:52%;top:37%" data-region="Île-de-France">Île-de-France</button>
-<div class="map-caption">Carte schématique · Sélectionnez un point pour découvrir les fromages</div>
+<div class="map-caption">Carte administrative sans relief · Sélectionnez un repère pour découvrir les fromages</div>
 </div>
 <div class="region-results" id="regionResults"><div class="empty-state">Sélectionnez une région sur la carte pour afficher les fromages de son terroir.</div></div>
 </section>
