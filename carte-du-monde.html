@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fbfaf6">
+<title>Atlas des fromages — Le Colonel</title>
+<link rel="stylesheet" href="styles.css?v=atlas-20261124">
+<style>
+.atlas-hero{padding:64px 7% 38px;text-align:center;background:linear-gradient(120deg,#f1eee5,#faf9f5)}
+.atlas-hero h1{font:normal clamp(36px,5vw,54px) Georgia,serif;color:#526b5d;margin:12px 0}
+.atlas-hero p{color:#777d73;line-height:1.7;max-width:650px;margin:auto}
+.atlas-wrap{max-width:1100px;margin:auto;padding:32px 22px 80px}
+.atlas-top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.atlas-top h2{font:normal 28px Georgia,serif;color:#526b5d;margin:0}
+.back-link{color:#617563;text-decoration:none;font-size:13px}
+.country-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px}
+.country-card{border:1px solid #e9e6dd;border-radius:18px;background:#fff;padding:17px;text-align:left;cursor:pointer;box-shadow:0 5px 18px #303a3008;transition:.2s;color:#465548}
+.country-card:hover,.country-card.active{border-color:#aab8a8;background:#f5f7f1;transform:translateY(-2px)}
+.country-card strong{display:block;font:normal 18px Georgia,serif;margin-bottom:5px}
+.country-card small{color:#888d83}
+.world-note{margin-top:16px;color:#898b82;font-size:12px;line-height:1.6}
+.country-panel{display:none;margin-top:30px}
+.country-panel.active{display:block}
+.france-map{position:relative;max-width:760px;margin:22px auto 26px;min-height:420px;border-radius:24px;background:radial-gradient(ellipse at center,#f8f8f2,#f0eee6);overflow:hidden;border:1px solid #e9e6dd}
+.france-shape{position:absolute;left:50%;top:50%;width:min(60%,390px);height:82%;transform:translate(-50%,-50%);background:#dce5d9;clip-path:polygon(34% 0,62% 5%,74% 19%,91% 28%,84% 44%,100% 58%,80% 72%,72% 91%,53% 100%,39% 88%,22% 92%,17% 75%,0 62%,12% 45%,8% 26%,25% 17%);border:1px solid #b9c9b8}
+.region-dot{position:absolute;z-index:2;transform:translate(-50%,-50%);border:1px solid #fff;background:#607b66;color:white;border-radius:999px;padding:8px 12px;font-size:12px;box-shadow:0 3px 12px #25352525;cursor:pointer;white-space:nowrap}
+.region-dot:hover,.region-dot.active{background:#b49a6b;box-shadow:0 0 0 4px #b49a6b30}
+.map-caption{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#85887e;font-size:11px}
+.region-results{margin-top:26px}
+.region-results h3{font:normal 25px Georgia,serif;color:#526b5d}
+.cheese-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:13px}
+.cheese-mini{background:#fff;border:1px solid #ece9e1;border-radius:16px;padding:15px}
+.cheese-mini strong{display:block;font:normal 18px Georgia,serif;color:#526b5d;margin-bottom:6px}
+.cheese-mini span{font-size:12px;color:#85877f}
+.empty-state{padding:20px;border-radius:14px;background:#f5f2e9;color:#777d73;line-height:1.6}
+@media(max-width:620px){.atlas-wrap{padding:24px 15px 55px}.france-map{min-height:370px}.france-shape{width:67%;height:78%}.region-dot{font-size:10px;padding:7px 9px}.atlas-hero{padding:48px 7% 30px}}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="index.html">LE <span>COLONEL</span> 🧀</a>
+<nav id="nav">
+<a href="index.html#accueil">Accueil</a>
+<a href="index.html#catalogue">Catalogue</a>
+<a href="carte-du-monde.html">Carte du monde</a>
+<a href="index.html#apropos">À propos</a>
+</nav>
+<a class="universe-link" href="https://myonlinestudio.github.io/myconature/" aria-label="Découvrir MycoNature">🍄 <span>MycoNature</span></a>
+<a class="quiz-launch" href="quiz.html"><span class="quiz-icon">✦</span><span class="quiz-label">Quiz fromager</span></a>
+<button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu">☰</button>
+</header>
+<section class="atlas-hero">
+<span class="kicker">L'atlas des terroirs</span>
+<h1>Le monde des fromages</h1>
+<p>Parcourez les pays producteurs, puis explorez les régions et les fromages qui leur sont associés.</p>
+</section>
+<main class="atlas-wrap">
+<div class="atlas-top"><h2>Choisissez un pays</h2><a class="back-link" href="index.html">← Retour au catalogue</a></div>
+<div class="country-grid" id="countryGrid"></div>
+<p class="world-note">Les pays proposés sont ceux actuellement représentés dans le catalogue. Les régions ne sont affichées que lorsqu'une localisation régionale est renseignée.</p>
+<section class="country-panel" id="francePanel">
+<div class="atlas-top"><h2>🇫🇷 France · Explorer les régions</h2><a class="back-link" href="#" id="allCountries">← Tous les pays</a></div>
+<div class="france-map" aria-label="Carte schématique de France avec régions fromagères interactives">
+<div class="france-shape"></div>
+<button class="region-dot" style="left:52%;top:19%" data-region="Normandie">Normandie</button>
+<button class="region-dot" style="left:70%;top:43%" data-region="Alsace">Alsace</button>
+<button class="region-dot" style="left:63%;top:76%" data-region="Savoie">Savoie</button>
+<button class="region-dot" style="left:47%;top:59%" data-region="Jura">Jura</button>
+<button class="region-dot" style="left:30%;top:70%" data-region="Aveyron">Aveyron</button>
+<button class="region-dot" style="left:28%;top:43%" data-region="Touraine">Touraine</button>
+<button class="region-dot" style="left:52%;top:37%" data-region="Île-de-France">Île-de-France</button>
+<div class="map-caption">Carte schématique · Sélectionnez un point pour découvrir les fromages</div>
+</div>
+<div class="region-results" id="regionResults"><div class="empty-state">Sélectionnez une région sur la carte pour afficher les fromages de son terroir.</div></div>
+</section>
+</main>
+<script src="data.js"></script>
+<script>
+const grid=document.getElementById('countryGrid');
+const panel=document.getElementById('francePanel');
+const countries=[...new Set((window.CHEESES||[]).map(c=>c.country||c.region).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'fr'));
+countries.forEach(country=>{
+ const count=CHEESES.filter(c=>(c.country||c.region)===country).length;
+ const b=document.createElement('button');b.className='country-card';b.innerHTML='<strong>'+country.replace(/[&<>"]/g,'')+'</strong><small>'+count+' fromage'+(count>1?'s':'')+' au catalogue</small>';
+ b.addEventListener('click',()=>{
+ document.querySelectorAll('.country-card').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+ if(country==='France'){panel.classList.add('active');panel.scrollIntoView({behavior:'smooth',block:'start'});}
+ else {panel.classList.remove('active');document.getElementById('regionResults').innerHTML='';}
+ });grid.appendChild(b);
+});
+function showRegion(region){
+ document.querySelectorAll('.region-dot').forEach(x=>x.classList.toggle('active',x.dataset.region===region));
+ const items=CHEESES.filter(c=>(c.country==='France')&&c.region===region);
+ const target=document.getElementById('regionResults');
+ target.innerHTML='<h3>'+region+' · '+items.length+' fromage'+(items.length>1?'s':'')+'</h3>';
+ if(!items.length){target.innerHTML+='<div class="empty-state">Aucun fromage de cette région n’est encore renseigné dans le catalogue.</div>';return;}
+ const list=document.createElement('div');list.className='cheese-results';
+ items.forEach(c=>{const card=document.createElement('article');card.className='cheese-mini';const title=document.createElement('strong');title.textContent=c.name;const meta=document.createElement('span');meta.textContent=(c.family||'Famille non renseignée')+' · '+(c.milk||'Lait non renseigné')+(c.label&&c.label.length?' · '+c.label.join(', '):'');card.append(title,meta);list.appendChild(card);});
+ target.appendChild(list);
+}
+document.querySelectorAll('.region-dot').forEach(b=>b.addEventListener('click',()=>showRegion(b.dataset.region)));
+document.getElementById('allCountries').addEventListener('click',e=>{e.preventDefault();panel.classList.remove('active');document.querySelectorAll('.country-card').forEach(x=>x.classList.remove('active'));grid.scrollIntoView({behavior:'smooth'});});
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('nav').classList.toggle('open'));
+</script>
+</body>
+</html>
