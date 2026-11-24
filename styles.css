@@ -714,3 +714,28 @@ footer strong {color:#53675a}
   .hero p {font-size:15px;line-height:1.75}
   .hero .kicker {font-size:10px;letter-spacing:2.5px}
 }
+
+
+/* Lien discret vers MycoNature */
+.universe-link {
+display:inline-flex;
+align-items:center;
+gap:7px;
+padding:8px 12px;
+border:1px solid #e6e3da;
+border-radius:999px;
+background:#fbfaf6;
+color:#596d5e;
+font:600 13px/1 Arial,sans-serif;
+text-decoration:none;
+white-space:nowrap;
+transition:background .2s ease,border-color .2s ease,color .2s ease;
+}
+.universe-link:hover {
+background:#f0f2ed;
+border-color:#c9d2c8;
+color:#405846;
+}
+@media(max-width:620px) {
+.universe-link {padding:8px 9px;font-size:12px;gap:5px}
+}
